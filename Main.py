@@ -8,7 +8,7 @@ Class CatFacts:
     def get_nth_cat_breed(self, n):
     # do get request
     results = requests.get(self.api)
-    data = results.json
+    data = results.json()
 
     if 0 < n <= len(data['data']):
         return data['data'][n-1]
