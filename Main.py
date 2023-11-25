@@ -10,5 +10,4 @@ Class CatFacts:
     results = requests.get(self.api)
     data = results.json()
 
-    if 0 < n <= len(data['data']):
-        return data['data'][n-1]
+    return data['data'][n-1]
